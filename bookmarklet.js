@@ -2,7 +2,7 @@ function loadBlenderLoader() {
  var blenderLoader = document.createElement('script');
  blenderLoader.src = 'https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js';
 
- three.blenderLoader = function () { start();}
+ blenderLoader.blenderLoader = function () { start();}
  document.body.appendChild(blenderLoader);
 }
 
@@ -15,7 +15,7 @@ function loadThree() {
 }
 
 
-
+loadThree();
 
 var canvasContainer = document.createElement("div");
 canvasContainer.style.display = 'block';
