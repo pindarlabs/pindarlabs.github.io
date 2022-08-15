@@ -38,6 +38,7 @@ canvasContainer.appendChild(canvasEl);
 // So, our project starts like this. In your JavaScript add these variables. Note that because there is a bit at work here that would otherwise be in global scope, we’re wrapping our entire project in a function:
 
 function start() {
+ console.log('STARTING!');
   // Set our main variables
  let scene,  
    renderer,
@@ -51,7 +52,7 @@ function start() {
    clock = new THREE.Clock(),          // Used for anims, which run to a clock instead of frame rate 
    currentlyAnimating = false,         // Used to check whether characters neck is being used in another anim
    raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
-   loaderAnim = document.getElementById('js-loader');
+//    loaderAnim = document.getElementById('js-loader');
 
    // We’re going to set up Three.js. This consists of a scene, a renderer, a camera, lights, and an update function. The update function runs on every frame.
 
@@ -171,7 +172,7 @@ function start() {
 
        // Perfect, we’ve loaded in our model. Let’s now load in the texture and apply it. This model came with the texture and the model has been mapped to this texture in Blender. This process is called UV mapping. Feel free to download the image itself to look at it, and learn more about UV mapping if you’d like to explore the idea of making your own character.
 
-       loaderAnim.remove();
+//        loaderAnim.remove();
 
        // All we’re doing here is removing the loading animation overlay once Stacy has been added to the scene. Save and then refresh, you should see the loader until the page is ready to show Stacy. If the model is cached, the page might load too quickly to see it.
 
