@@ -1,25 +1,34 @@
-var THREE_LOADED = false;
-var BLENDER_LOADER_LOADED = false;
-var three = document.createElement('script');
-three.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js';
+function loadBlenderLoader() {
+ var blenderLoader = document.createElement('script');
+ blenderLoader.src = 'https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js';
 
-three.onload = function () { THREE_LOADER = true;}
+ three.blenderLoader = function () { init();}
+ document.body.appendChild(blenderLoader);
+}
 
-var blenderLoader = document.createElement('script');
-blenderLoader.src = 'https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js';
+function loadThree() {
+ var three = document.createElement('script');
+ three.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js';
 
-three.blenderLoader = function () { BLENDER_LOADER_LOADE = true;}
+ three.onload = function () { loadBlenderLoader();}
+ document.body.appendChild(three);
+}
 
-document.body.appendChild(three);
-document.body.appendChild(blenderLoader);
+
 
 function init(){
  alert('LOADED!'); 
 }
 
-var loaderTimer = setInterval(() => {
-  if (THREE_LOADED == true && BLENDER_LOADER_LOADED == true) {
-    init();
-  }
-  
-}, 100);
+var canvasContainer = document.createElement("div");
+canvasContainer.style.display = 'block';
+canvasContainer.style.width = '100%';
+canvasContainer.style.textAlign = 'center';
+canvasContainer.style.position = 'fixed';
+canvasContainer.style.bottom = 0;
+canvasContainer.innerHTML = "HELLO!";
+
+document.body.appendChild(canvasContainer);
+// var canvas = document.createElement("canvas");
+// canvas.width = 400;
+// canvas.height = 400;
