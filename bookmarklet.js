@@ -52,7 +52,7 @@ function start() {
    clock = new THREE.Clock(),          // Used for anims, which run to a clock instead of frame rate 
    currentlyAnimating = false,         // Used to check whether characters neck is being used in another anim
    raycaster = new THREE.Raycaster(),  // Used to detect the click on our character
-//    loaderAnim = document.getElementById('js-loader');
+loaderAnim = document.getElementById('js-loader');
 
    // We’re going to set up Three.js. This consists of a scene, a renderer, a camera, lights, and an update function. The update function runs on every frame.
 
