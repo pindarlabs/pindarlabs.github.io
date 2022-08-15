@@ -1,5 +1,3 @@
-var 3 = document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//pindarlabs.github.io/bookmarklet.js';void(0);
-
 var THREE_LOADED = false;
 var BLENDER_LOADER_LOADED = false;
 var three = document.createElement('script');
