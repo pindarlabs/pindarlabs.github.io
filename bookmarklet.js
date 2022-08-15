@@ -17,7 +17,7 @@ function init(){
  alert('LOADED!'); 
 }
 
-var loaderTimer = setInterval(() = > {
+var loaderTimer = setInterval(() => {
   if (THREE_LOADED == true && BLENDER_LOADER_LOADED == true) {
     init();
   }
